@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.220.247/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  # 所有实体属性为null的值都不返回 就不用每个实体类都加上@JsonInclude注解了
+  jackson:
+    default-property-inclusion: non_null
+# url prefix /sell/request
+server:
+  servlet:
+    context-path: /sell
+
+wechat:
+  mpAppId: wx7cf7eedb16814196
+  mpAppSecret: d8247928aec24608e9f0b2847ef92f73
+  #  openAppId:
+  #  openAppSecret:
+  openIdPro: oTgZpwXXwkJ_9NeworJiEFwYNeeg
+  #  mchId: 1483469312
+  #  mchKey: C5245D70627C1F8E9964D494B0735025
+  notifyUrl: http://vhsell.natapp1.cc/sell/pay/notify
+
+projecturl:
+  wechatMpAuthorize: http://vhsell.natapp1.cc
+  wechatOpenAuthorize: http://vhsell.natapp1.cc
+  sell: http://vhsell.natapp1.cc
